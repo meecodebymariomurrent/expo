@@ -6,7 +6,6 @@ import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.uimanager.ReactShadowNode
 import com.facebook.react.uimanager.ViewManager
-import expo.modules.devmenu.extensions.DevMenuExtension
 import expo.modules.devmenu.modules.DevMenuInternalModule
 import expo.modules.devmenu.modules.DevMenuModule
 import expo.modules.devmenu.modules.DevMenuSettings
@@ -18,7 +17,6 @@ class DevMenuPackage: Package, ReactPackage {
       DevMenuInternalModule(reactContext),
       DevMenuModule(reactContext),
       DevMenuSettings(reactContext),
-      DevMenuExtension(reactContext),
     )
   }
 
