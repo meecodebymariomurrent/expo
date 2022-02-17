@@ -45,7 +45,7 @@ class DevMenuInternalMenuControllerModule(private val reactContext: ReactContext
   }
 
   override fun openDevMenuFromReactNative() {
-    DevMenuManager.getSession()?.reactInstanceManager?.devSupportManager?.let {
+    DevMenuManager.getReactInstanceManager()?.devSupportManager?.let {
       DevMenuManager.closeMenu()
       it.devSupportEnabled = true
       it.showDevOptionsDialog()
