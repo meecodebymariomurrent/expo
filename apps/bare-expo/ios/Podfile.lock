@@ -230,6 +230,8 @@ PODS:
     - ExpoModulesCore
   - ExpoSystemUI (1.1.0):
     - ExpoModulesCore
+  - ExpoWebBrowser (10.1.0):
+    - ExpoModulesCore
   - EXPrint (11.1.0):
     - ExpoModulesCore
   - EXScreenCapture (4.1.0):
@@ -266,8 +268,6 @@ PODS:
     - ExpoModulesCore
   - EXUpdatesInterface (0.5.0)
   - EXVideoThumbnails (6.2.0):
-    - ExpoModulesCore
-  - EXWebBrowser (10.1.0):
     - ExpoModulesCore
   - FacebookSDK/CoreKit (9.2.0):
     - FBSDKCoreKit (~> 9.2.0)
@@ -847,6 +847,7 @@ DEPENDENCIES:
   - ExpoModulesCore (from `../../../packages/expo-modules-core/ios`)
   - ExpoRandom (from `../../../packages/expo-random/ios`)
   - ExpoSystemUI (from `../../../packages/expo-system-ui/ios`)
+  - ExpoWebBrowser (from `../../../packages/expo-web-browser/ios`)
   - EXPrint (from `../../../packages/expo-print/ios`)
   - EXScreenCapture (from `../../../packages/expo-screen-capture/ios`)
   - EXScreenOrientation (from `../../../packages/expo-screen-orientation/ios`)
@@ -864,7 +865,6 @@ DEPENDENCIES:
   - EXTrackingTransparency (from `../../../packages/expo-tracking-transparency/ios`)
   - EXUpdatesInterface (from `../../../packages/expo-updates-interface/ios`)
   - EXVideoThumbnails (from `../../../packages/expo-video-thumbnails/ios`)
-  - EXWebBrowser (from `../../../packages/expo-web-browser/ios`)
   - FBLazyVector (from `../../../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../../../node_modules/react-native/React/FBReactNativeSpec`)
   - glog (from `../../../node_modules/react-native/third-party-podspecs/glog.podspec`)
@@ -1124,6 +1124,9 @@ EXTERNAL SOURCES:
   ExpoSystemUI:
     inhibit_warnings: false
     :path: "../../../packages/expo-system-ui/ios"
+  ExpoWebBrowser:
+    inhibit_warnings: false
+    :path: "../../../packages/expo-web-browser/ios"
   EXPrint:
     inhibit_warnings: false
     :path: "../../../packages/expo-print/ios"
@@ -1175,9 +1178,6 @@ EXTERNAL SOURCES:
   EXVideoThumbnails:
     inhibit_warnings: false
     :path: "../../../packages/expo-video-thumbnails/ios"
-  EXWebBrowser:
-    inhibit_warnings: false
-    :path: "../../../packages/expo-web-browser/ios"
   FBLazyVector:
     :path: "../../../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
@@ -1287,7 +1287,7 @@ SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
-  DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
+  DoubleConversion: 831926d9b8bf8166fd87886c4abab286c2422662
   EXAmplitude: f346f64108b628046524182a8cc30df407643dc9
   EXAppAuth: 628fbc475121581364241f9f12fc082f23d0b567
   EXApplication: bdc8dc27713235565da1029a34385229f31b8e08
@@ -1342,6 +1342,7 @@ SPEC CHECKSUMS:
   ExpoModulesCore: 5ee50e40092c569518fe06977be5e747228c652a
   ExpoRandom: e1e102c8ab2bd0fe08532c0dfef012ce4b603553
   ExpoSystemUI: a6ee69bdbe8bc6caf815117fb5e09330cd820448
+  ExpoWebBrowser: 860eff8b9f413111bba517fedaa642b745af99d4
   EXPrint: 9fb70fda9501c41d4d2421f414f6e38f957d9d44
   EXScreenCapture: 0146fdf6ca4c3402a1cf62b2ddb739a840e08c94
   EXScreenOrientation: 35776938aaa9b6460b4df72ff96f2b35e9a4e28b
@@ -1359,7 +1360,6 @@ SPEC CHECKSUMS:
   EXTrackingTransparency: 0622e1c7e10f5cae378f6d77dc6fdf433c9a7d81
   EXUpdatesInterface: f459b515151bd73fff7a35366eace34a6c6a0d3f
   EXVideoThumbnails: 847d648d6f4bc0c1afad05caa56a487dc543445e
-  EXWebBrowser: 37388663fa51cbfc883de2244931a5182d948e5f
   FacebookSDK: 4b9bb8e2824898b47f18c666dc145c09b40609e6
   FBLazyVector: e5569e42a1c79ca00521846c223173a57aca1fe1
   FBReactNativeSpec: fe08c1cd7e2e205718d77ad14b34957cce949b58
@@ -1370,7 +1370,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 3d36e05da74cb8b7ce30e6594a8f201b982c725c
   FirebaseInstallations: a58d4f72ec5861840b84df489f2668d970df558a
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
+  glog: 5337263514dd6f09803962437687240c5dc39aa4
   GoogleAppMeasurement: 0c3b134b2c0a90c4c24833873894bfe0e42a0384
   GoogleDataTransport: 8b0e733ea77c9218778e5a9e34ba9508b8328939
   GoogleMLKit: 6ca2a10de262ee1017b52ac045e8967884ace992
