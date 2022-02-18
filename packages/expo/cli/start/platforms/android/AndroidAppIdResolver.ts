@@ -2,6 +2,7 @@ import { AndroidConfig } from '@expo/config-plugins';
 
 import { AppIdResolver } from '../AppIdResolver';
 
+/** Resolves the Android package name from the Expo config or native files. */
 export class AndroidAppIdResolver extends AppIdResolver {
   constructor(projectRoot: string) {
     super(projectRoot, 'android', 'android.package');

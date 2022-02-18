@@ -4,6 +4,7 @@ import fs from 'fs';
 
 import { AppIdResolver } from '../AppIdResolver';
 
+/** Resolves the iOS bundle identifier from the Expo config or native files. */
 export class AppleAppIdResolver extends AppIdResolver {
   constructor(projectRoot: string) {
     super(projectRoot, 'ios', 'ios.bundleIdentifier');
