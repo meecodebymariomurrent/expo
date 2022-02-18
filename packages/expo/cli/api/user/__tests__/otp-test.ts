@@ -10,7 +10,7 @@ jest.mock('../../../utils/prompts');
 jest.mock('../user');
 jest.mock('../../../log');
 
-const asMock = (fn: any): jest.Mock => fn as jest.Mock;
+const asMock = (fn: any): jest.Mock => fn;
 
 beforeEach(() => {
   asMock(promptAsync).mockReset();
